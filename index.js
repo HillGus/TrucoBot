@@ -1,4 +1,4 @@
-global.token = 'xoxb-532026109745-532657871234-sn8Ev0rEbYCb4EPVofhXUz8J';
+global.token = process.env.token;
 
 var http = require('http');
 var finalhandler = require('finalhandler');
