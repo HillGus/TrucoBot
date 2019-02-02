@@ -9,11 +9,16 @@
             json: true,
             body: body,
             headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${global.token}`,
-                charset: 'utf-8'
+                'Content-Type': 'application/json;charset=utf-8',
+                Authorization: `Bearer ${global.token}`
             }
-        })
+        }, function (error, response, body) {
+	  console.log('\nSlack response: \n');
+  	  console.log('error:', error); 
+	  console.log('statusCode:', response && response.statusCode); 
+	  console.log('body:', body); 
+	  console.log('\n' + new Array(100).join('=') + '\n');
+	});
     }
     
     
